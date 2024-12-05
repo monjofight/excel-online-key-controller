@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Excel Online Key Listener",
+  "version": "1.0",
+  "description": "Disables specific keys in Excel Online and its iframes.",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "all_frames": true
+    }
+  ]
+}
